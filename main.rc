@@ -1,0 +1,34 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "include/resource.h"
+
+IDI_MYICON ICON "resources/favicon.ico"
+IDR_MYMENU MENU
+{
+	POPUP "文件"
+	{
+		MENUITEM "新建文件",		ID_FILE_NEW
+		MENUITEM "新建文件夹",	ID_FOLDER_NEW
+		MENUITEM "选择文件",			ID_FILE_SAVE
+		MENUITEM "另存为",		ID_FILE_SAVE_AS
+	}
+	POPUP "编辑"
+	{
+		MENUITEM "复制",			ID_EDIT_COPY
+		MENUITEM "粘贴",			ID_EDIT_PASTE
+		MENUITEM "注释",			ID_EDIT_COMMENT
+		MENUITEM "撤销",			ID_EDIT_UNDO
+	}
+	POPUP "操作"
+	{
+		MENUITEM "打开对话框",	ID_OP_OPEN_DLG
+	}
+}
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 239, 66
+FONT 8, "MS Sans Serif"
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "My About Box"
+{
+    DEFPUSHBUTTON   "OK",IDOK,174,18,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,35,50,14
+}
